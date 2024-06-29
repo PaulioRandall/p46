@@ -10,26 +10,29 @@
 		Points,
 		TargetToggle,
 		Target,
+		Console,
+		ConsoleShapeDrawer,
 		CopyCoordsButton,
 	} from '$lib'
 </script>
 
 <main>
 	<P46 size="24">
-		<svelte:fragment slot="header">
-			<HeaderRow>
-				<AxisToggle />
-				<GuidelinesToggle />
-				<PointsToggle />
-				<TargetToggle />
-				<CopyCoordsButton />
-			</HeaderRow>
-		</svelte:fragment>
+		<HeaderRow slot="header">
+			<AxisToggle />
+			<GuidelinesToggle />
+			<PointsToggle />
+			<TargetToggle />
+			<CopyCoordsButton />
+		</HeaderRow>
 
 		<Axis />
 		<Guidelines />
 		<Points />
+		<ConsoleShapeDrawer />
 		<Target />
+
+		<Console slot="footer" />
 	</P46>
 </main>
 

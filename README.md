@@ -38,6 +38,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 <Console />
 ```
 
+### `<ConsoleShapeDrawer>`
+
+```svelte
+<ConsoleShapeDrawer />
+```
+
 ### `<CopyCoordsButton>`
 
 ```svelte

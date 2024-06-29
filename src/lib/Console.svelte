@@ -1,52 +1,39 @@
 <script>
-	import TabLabels from './console/TabLabels.svelte'
-	import Textarea from './console/Textarea.svelte'
+	import { getContext } from 'svelte'
+	import ShapeTabLabel from './private/ShapeTabLabel.svelte'
+	import ConsoleTabPanel from './private/ConsoleTabPanel.svelte'
+	import NewShapeButton from './private/NewShapeButton.svelte'
+	import DelShapeButton from './private/DelShapeButton.svelte'
 
-	export let shapes = {}
-	let selectedId = ''
-
-	const newShape = (data = 'move to A0\n') => {
-		const id = crypto.randomUUID().slice(24)
-		shapes[id] = data
-		selectedId = id
-	}
-
-	const delShape = () => {
-		if (Object.keys(shapes).length > 1) {
-			delete shapes[selectedId]
-			shapes = shapes
-
-			const ids = Object.keys(shapes)
-			selectedId = ids[ids.length - 1]
-		}
-	}
-
-	newShape(
-		[
-			'move to U2',
-			'quad curve to M22 control with V16',
-			'quad curve to E2 control with D16',
-			'quad curve to U2 control with M8',
-			'close',
-		].join('\n')
-	)
+	const userShapesStore = getContext('p46-user-shapes-store')
 </script>
 
-<div class="p46-input-tabs">
-	<TabLabels
-		ids={Object.keys(shapes)}
-		bind:selected={selectedId}
-		{newShape}
-		{delShape} />
-	<div class="p46-input-tab-content">
-		<Textarea bind:value={shapes[selectedId]} />
+<div class="p46-console">
+	<div class="p46-console-tab-labels">
+		{#each $userShapesStore as shape (shape.id)}
+			<ShapeTabLabel {shape} />
+		{/each}
+		<NewShapeButton />
+	</div>
+
+	<div class="p46-console-tab-panels">
+		<ConsoleTabPanel />
 	</div>
 </div>
 
 <style>
-	.p46-input-tabs {
+	.p46-console {
+		display: flex;
+		flex-direction: column;
 	}
 
-	.p46-input-tab-content {
+	.p46-console-tab-labels {
+		display: flex;
+		gap: 0.2rem;
+		z-index: 1;
+	}
+
+	.p46-console-tab-panels {
+		display: flex;
 	}
 </style>

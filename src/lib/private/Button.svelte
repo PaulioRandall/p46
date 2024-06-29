@@ -4,11 +4,16 @@
 
 <style>
 	.p46-button {
-		min-width: 5rem;
-		font-size: 1.2rem;
+		flex-grow: 1;
+
+		display: flex;
+		justify-content: center;
+
+		min-width: 8rem;
 		padding: 0.5rem 1rem;
 		border-radius: 0.4rem;
+
+		font-size: 1.2rem;
 		cursor: pointer;
-		flex-grow: 1;
 	}
 </style>

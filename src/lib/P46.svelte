@@ -5,6 +5,8 @@
 
 	import Grid from './private/Grid.svelte'
 	import HitBoxes from './private/HitBoxes.svelte'
+	import UserShape from './private/UserShape.js'
+
 	import Console from './Console.svelte'
 	import generatePoints from './generate-points'
 
@@ -15,8 +17,6 @@
 
 	const p45 = new P45(Number(size))
 	const points = generatePoints(p45)
-
-	let shapes
 
 	setContext('p45', p45)
 	setContext('p46-points', points)
@@ -31,10 +31,23 @@
 		)
 	)
 
+	const userShapes = [new UserShape(), new UserShape()]
+
+	userShapes[0].draw = [
+		'move to U2',
+		'quad curve to M22 control with V16',
+		'quad curve to E2 control with D16',
+		'quad curve to U2 control with M8',
+		'close',
+	].join('\n')
+
 	setContext('p46-axis-enabled-store', writable(true))
 	setContext('p46-guidelines-enabled-store', writable(true))
 	setContext('p46-points-enabled-store', writable(true))
 	setContext('p46-target-enabled-store', writable(true))
+
+	setContext('p46-user-shapes-store', writable(userShapes))
+	setContext('p46-selected-user-shape-store', writable(userShapes[0]))
 </script>
 
 <div class="p46">
@@ -43,24 +56,34 @@
 			<slot name="header" />
 		</div>
 	{/if}
+
 	<Grid>
 		<slot />
-		{#if shapes}
-			{#each Object.entries(shapes) as [id, draw] (id)}
-				<Shape {draw} fill="transparent" />
-			{/each}
-		{/if}
 		<HitBoxes />
 	</Grid>
-	<Console bind:shapes />
+
+	{#if $$slots.footer}
+		<div class="p46-footer">
+			<slot name="footer" />
+		</div>
+	{/if}
 </div>
 
 <style>
+	.p46 {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
 	.p46-header {
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 1rem;
 		gap: 1rem;
 		width: 100%;
+	}
+
+	.p46-footer {
 	}
 </style>
