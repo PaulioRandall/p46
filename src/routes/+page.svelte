@@ -1,10 +1,24 @@
 <script>
-	import { P46 } from '$lib'
+	import {
+		P46, //
+		HeaderRow,
+		AxisToggle,
+		GuidelinesToggle,
+		PointsToggle,
+		TargetToggle,
+	} from '$lib'
 </script>
 
 <main>
 	<P46 size="24">
-		<svelte:fragment slot="header"></svelte:fragment>
+		<svelte:fragment slot="header">
+			<HeaderRow>
+				<AxisToggle />
+				<GuidelinesToggle />
+				<PointsToggle />
+				<TargetToggle />
+			</HeaderRow>
+		</svelte:fragment>
 	</P46>
 </main>
 

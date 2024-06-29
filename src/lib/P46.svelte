@@ -1,5 +1,6 @@
 <script>
 	import { setContext } from 'svelte'
+	import { writable } from 'svelte/store'
 	import { P45, Shape } from 'p45'
 
 	import Header from './header/Header.svelte'
@@ -24,12 +25,12 @@
 		return p.x === p45.center && p.y === p45.center
 	})
 
-	let pointsEnabled = true
-	let guidelinesEnabled = true
-	let targetEnabled = true
-	let axisEnabled = true
-
 	let shapes
+
+	setContext('p46-axis-enabled-store', writable(true))
+	setContext('p46-guidelines-enabled-store', writable(true))
+	setContext('p46-points-enabled-store', writable(true))
+	setContext('p46-target-enabled-store', writable(true))
 </script>
 
 <div class="p46">
@@ -38,20 +39,8 @@
 			<slot name="header" />
 		</div>
 	{/if}
-	<Header
-		{selected}
-		bind:pointsEnabled
-		bind:guidelinesEnabled
-		bind:targetEnabled
-		bind:axisEnabled />
-	<RefGrid
-		{p45}
-		{points}
-		bind:selected
-		{pointsEnabled}
-		{guidelinesEnabled}
-		{targetEnabled}
-		{axisEnabled}>
+	<Header {selected} />
+	<RefGrid {p45} {points} bind:selected>
 		{#if shapes}
 			{#each Object.entries(shapes) as [id, draw] (id)}
 				<Shape {draw} fill="transparent" />

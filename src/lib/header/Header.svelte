@@ -1,22 +1,10 @@
 <script>
-	import Controls from './Controls.svelte'
 	import CoordInfo from './CoordInfo.svelte'
 
 	export let selected
-	export let pointsEnabled
-	export let guidelinesEnabled
-	export let targetEnabled
-	export let axisEnabled
 </script>
 
 <div class="p46-header">
-	<div class="p46-header-row">
-		<Controls
-			bind:pointsEnabled
-			bind:guidelinesEnabled
-			bind:targetEnabled
-			bind:axisEnabled />
-	</div>
 	<div class="p46-header-row">
 		<CoordInfo {selected} />
 	</div>

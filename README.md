@@ -20,10 +20,22 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 
 ## Components
 
+### `<AxisToggle>`
+
+```svelte
+<AxisToggle />
+```
+
 ### `<Console>`
 
 ```svelte
 <Console />
+```
+
+### `<GuidelinesToggle>`
+
+```svelte
+<GuidelinesToggle />
 ```
 
 ### `<HeaderRow>`
@@ -49,4 +61,22 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 	size={24}
 	selected={Grid.centerNode}
 />
+```
+
+### `<PointsToggle>`
+
+```svelte
+<PointsToggle />
+```
+
+### `<TargetToggle>`
+
+```svelte
+<TargetToggle />
+```
+
+### `<ToggleAxis>`
+
+```svelte
+<ToggleAxis />
 ```

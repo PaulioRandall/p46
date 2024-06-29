@@ -1,4 +1,6 @@
 <script>
+	import { getContext } from 'svelte'
+
 	import Points from './Points.svelte'
 	import Guidelines from './Guidelines.svelte'
 	import Axis from './Axis.svelte'
@@ -9,10 +11,10 @@
 	export let points
 	export let selected
 
-	export let guidelinesEnabled
-	export let axisEnabled
-	export let pointsEnabled
-	export let targetEnabled
+	const axisEnabledStore = getContext('p46-axis-enabled-store')
+	const guidelinesEnabledStore = getContext('p46-guidelines-enabled-store')
+	const pointsEnabledStore = getContext('p46-points-enabled-store')
+	const targetEnabledStore = getContext('p46-target-enabled-store')
 </script>
 
 <svg
@@ -24,15 +26,15 @@
 	stroke="transparent"
 	fill="darkgrey"
 	class="p46-ref-grid">
-	{#if guidelinesEnabled}
+	{#if $guidelinesEnabledStore}
 		<Guidelines {p45} {points} />
 	{/if}
 
-	{#if axisEnabled}
+	{#if $axisEnabledStore}
 		<Axis {p45} {points} />
 	{/if}
 
-	{#if pointsEnabled}
+	{#if $pointsEnabledStore}
 		<Points {points} />
 	{/if}
 
@@ -42,7 +44,7 @@
 
 	<Hitboxes {points} bind:selected />
 
-	{#if targetEnabled}
+	{#if $targetEnabledStore}
 		<Target {p45} {selected} />
 	{/if}
 </svg>
