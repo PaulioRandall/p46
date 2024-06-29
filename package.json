@@ -1,0 +1,52 @@
+{
+	"author": "Paul Williams",
+	"name": "___TODO_NAME___",
+	"description": "___TODO_DESC___.",
+	"type": "module",
+	"license": "MIT",
+	"version": "0.1.0",
+	"engines": {
+		"node": ">=18"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/PaulioRandall/___TODO_NAME___.git"
+	},
+	"keywords": [
+		"svelte",
+		"plunder",
+		"___TODO_KEYWORD___"
+	],
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"svelte": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"fmt": "prettier --plugin prettier-plugin-svelte --log-level warn --write .",
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests --testPathPattern ./src/",
+		"build": "vite build",
+		"pkg": "svelte-package -t false",
+		"docs": "p24 -g \"dist/*.svelte\"",
+		"commit": "npm run fmt && npm run test && npm run build && npm run pkg && npm run docs && cat ./ready-to-ship.txt",
+		"dev": "npm run fmt && vite dev --port 3000"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "3.2.2",
+		"@sveltejs/kit": "2.5.17",
+		"@sveltejs/package": "2.3.2",
+		"jest": "29.7.0",
+		"p24": "0.20.0",
+		"prettier": "3.3.2",
+		"prettier-plugin-svelte": "3.2.5",
+		"vite": "5.3.2"
+	},
+	"dependencies": {},
+	"peerDependencies": {
+		"svelte": "4.x"
+	}
+}
