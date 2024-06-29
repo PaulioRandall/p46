@@ -9,6 +9,9 @@ export { default as PointsToggle } from './PointsToggle.svelte'
 export { default as Points } from './Points.svelte'
 
 export { default as AxisToggle } from './AxisToggle.svelte'
+export { default as Axis } from './Axis.svelte'
+
 export { default as TargetToggle } from './TargetToggle.svelte'
+export { default as Target } from './Target.svelte'
 
 export { default as CopyCoordsButton } from './CopyCoordsButton.svelte'

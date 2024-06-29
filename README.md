@@ -20,6 +20,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 
 ## Components
 
+### `<Axis>`
+
+```svelte
+<Axis />
+```
+
 ### `<AxisToggle>`
 
 ```svelte
@@ -81,6 +87,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 
 ```svelte
 <PointsToggle />
+```
+
+### `<Target>`
+
+```svelte
+<Target />
 ```
 
 ### `<TargetToggle>`

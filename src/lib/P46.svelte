@@ -3,8 +3,8 @@
 	import { writable } from 'svelte/store'
 	import { P45, Shape } from 'p45'
 
+	import Grid from './private/Grid.svelte'
 	import HitBoxes from './private/HitBoxes.svelte'
-	import RefGrid from './grid/RefGrid.svelte'
 	import Console from './Console.svelte'
 	import generatePoints from './generate-points'
 
@@ -43,7 +43,7 @@
 			<slot name="header" />
 		</div>
 	{/if}
-	<RefGrid>
+	<Grid>
 		<slot />
 		{#if shapes}
 			{#each Object.entries(shapes) as [id, draw] (id)}
@@ -51,7 +51,7 @@
 			{/each}
 		{/if}
 		<HitBoxes />
-	</RefGrid>
+	</Grid>
 	<Console bind:shapes />
 </div>
 

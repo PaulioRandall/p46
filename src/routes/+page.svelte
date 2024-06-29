@@ -3,11 +3,13 @@
 		P46, //
 		HeaderRow,
 		AxisToggle,
+		Axis,
 		GuidelinesToggle,
 		Guidelines,
 		PointsToggle,
 		Points,
 		TargetToggle,
+		Target,
 		CopyCoordsButton,
 	} from '$lib'
 </script>
@@ -24,8 +26,10 @@
 			</HeaderRow>
 		</svelte:fragment>
 
+		<Axis />
 		<Guidelines />
 		<Points />
+		<Target />
 	</P46>
 </main>
 

@@ -1,13 +1,7 @@
 <script>
 	import { getContext } from 'svelte'
 
-	import Axis from './Axis.svelte'
-	import Target from './Target.svelte'
-
 	const p45 = getContext('p45')
-
-	const axisEnabledStore = getContext('p46-axis-enabled-store')
-	const targetEnabledStore = getContext('p46-target-enabled-store')
 </script>
 
 <svg
@@ -18,16 +12,8 @@
 	aria-hidden="true"
 	stroke="transparent"
 	fill="darkgrey"
-	class="p46-ref-grid">
-	{#if $axisEnabledStore}
-		<Axis />
-	{/if}
-
+	class="p46-grid">
 	<g transform="translate(1,1)">
 		<slot />
 	</g>
-
-	{#if $targetEnabledStore}
-		<Target />
-	{/if}
 </svg>
