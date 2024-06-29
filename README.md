@@ -71,6 +71,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 />
 ```
 
+### `<Points>`
+
+```svelte
+<Points />
+```
+
 ### `<PointsToggle>`
 
 ```svelte

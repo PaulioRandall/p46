@@ -6,6 +6,7 @@
 		GuidelinesToggle,
 		Guidelines,
 		PointsToggle,
+		Points,
 		TargetToggle,
 		CopyCoordsButton,
 	} from '$lib'
@@ -24,6 +25,7 @@
 		</svelte:fragment>
 
 		<Guidelines />
+		<Points />
 	</P46>
 </main>
 

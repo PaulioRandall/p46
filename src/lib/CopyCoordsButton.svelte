@@ -14,7 +14,7 @@
 </script>
 
 {#if selected}
-	<Button on:click={copyText}>
+	<Button on:click={copyText} style="width: 7.5rem;">
 		<span style="font-weight: bold;">{selected.node}</span>
 		({selected.x}:{selected.y})
 	</Button>

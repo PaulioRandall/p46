@@ -7,19 +7,19 @@
 
 {#each points as p (p.node)}
 	<rect
-		x={p.topLeft.x}
-		y={p.topLeft.y}
+		x={p.x - 0.5}
+		y={p.y - 0.5}
 		width="1"
 		height="1"
 		fill="transparent"
 		stroke="transparent"
 		stroke-width="0.1"
-		class="p46-ref-grid-hitbox"
+		class="p46-hitbox"
 		on:click={() => selectedStore.set(p)} />
 {/each}
 
 <style>
-	.p46-ref-grid-hitbox {
+	.p46-hitbox {
 		cursor: pointer;
 	}
 </style>
