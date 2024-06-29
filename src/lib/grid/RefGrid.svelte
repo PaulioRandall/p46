@@ -2,7 +2,6 @@
 	import { getContext } from 'svelte'
 
 	import Points from './Points.svelte'
-	import Guidelines from './Guidelines.svelte'
 	import Axis from './Axis.svelte'
 	import Hitboxes from './Hitboxes.svelte'
 	import Target from './Target.svelte'
@@ -10,7 +9,6 @@
 	const p45 = getContext('p45')
 
 	const axisEnabledStore = getContext('p46-axis-enabled-store')
-	const guidelinesEnabledStore = getContext('p46-guidelines-enabled-store')
 	const pointsEnabledStore = getContext('p46-points-enabled-store')
 	const targetEnabledStore = getContext('p46-target-enabled-store')
 </script>
@@ -24,10 +22,6 @@
 	stroke="transparent"
 	fill="darkgrey"
 	class="p46-ref-grid">
-	{#if $guidelinesEnabledStore}
-		<Guidelines />
-	{/if}
-
 	{#if $axisEnabledStore}
 		<Axis />
 	{/if}

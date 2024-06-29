@@ -4,6 +4,7 @@
 		HeaderRow,
 		AxisToggle,
 		GuidelinesToggle,
+		Guidelines,
 		PointsToggle,
 		TargetToggle,
 		CopyCoordsButton,
@@ -21,6 +22,8 @@
 				<CopyCoordsButton />
 			</HeaderRow>
 		</svelte:fragment>
+
+		<Guidelines />
 	</P46>
 </main>
 

@@ -43,6 +43,7 @@
 		</div>
 	{/if}
 	<RefGrid>
+		<slot />
 		{#if shapes}
 			{#each Object.entries(shapes) as [id, draw] (id)}
 				<Shape {draw} fill="transparent" />
