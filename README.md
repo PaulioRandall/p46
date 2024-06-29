@@ -20,38 +20,21 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 
 ## Components
 
-### `<TemplateComponent>`
-
-Component description.
-
-```svelte
-<script context="module">
-	// Description of the module prop.
-	export const moduleProp
-</script>
-```
+### `<P46>`
 
 ```svelte
 <script>
-	// Description of the prop.
-	export let prop = "Default value"
+	// Size of the P45 grid.
+	export let size = 24
 
-	// Description of the set context.
-	setContext("ctx", ...)
+	// The selected node.
+	export let selected = Grid.centerNode
 </script>
-
-<!-- Default slot description. -->
-<slot />
-
-<!-- Named slot description. -->
-<slot name="name" />
 ```
 
 ```svelte
-<TemplateComponent
-	prop="Default value"
->
-	<div />
-	<div slot="name" />
-</TemplateComponent>
+<P46
+	size={24}
+	selected={Grid.centerNode}
+/>
 ```

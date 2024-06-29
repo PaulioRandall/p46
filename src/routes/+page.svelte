@@ -1,14 +1,10 @@
 <script>
-	import TemplateComponent from '$lib/TemplateComponent.svelte'
+	import { P45 } from 'p45'
+	import P46 from '$lib/P46.svelte'
 </script>
 
 <main>
-	<TemplateComponent>
-		<h1 class="heading">Heading</h1>
-		<p>Content</p>
-		<p>Content</p>
-		<p>Content</p>
-	</TemplateComponent>
+	<P46 p45={new P45(24)} />
 </main>
 
 <style>
@@ -20,9 +16,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-	}
-
-	.test-content {
-		font-size: max(32px, 2rem);
 	}
 </style>

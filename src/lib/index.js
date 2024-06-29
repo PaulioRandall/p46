@@ -1,1 +1,1 @@
-export { default as TemplateComponent } from './TemplateComponent.svelte'
+export { default as default } from './P46.svelte'
