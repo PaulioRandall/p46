@@ -32,6 +32,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 <Console />
 ```
 
+### `<CopyCoordsButton>`
+
+```svelte
+<CopyCoordsButton />
+```
+
 ### `<GuidelinesToggle>`
 
 ```svelte
@@ -50,16 +56,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 <script>
 	// Size of the P45 grid.
 	export let size = 24
-
-	// The selected node.
-	export let selected = Grid.centerNode
 </script>
 ```
 
 ```svelte
 <P46
 	size={24}
-	selected={Grid.centerNode}
 />
 ```
 

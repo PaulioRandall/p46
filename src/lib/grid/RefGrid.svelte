@@ -7,9 +7,7 @@
 	import Hitboxes from './Hitboxes.svelte'
 	import Target from './Target.svelte'
 
-	export let p45
-	export let points
-	export let selected
+	const p45 = getContext('p45')
 
 	const axisEnabledStore = getContext('p46-axis-enabled-store')
 	const guidelinesEnabledStore = getContext('p46-guidelines-enabled-store')
@@ -27,24 +25,24 @@
 	fill="darkgrey"
 	class="p46-ref-grid">
 	{#if $guidelinesEnabledStore}
-		<Guidelines {p45} {points} />
+		<Guidelines />
 	{/if}
 
 	{#if $axisEnabledStore}
-		<Axis {p45} {points} />
+		<Axis />
 	{/if}
 
 	{#if $pointsEnabledStore}
-		<Points {points} />
+		<Points />
 	{/if}
 
 	<g transform="translate(1,1)">
 		<slot />
 	</g>
 
-	<Hitboxes {points} bind:selected />
+	<Hitboxes />
 
 	{#if $targetEnabledStore}
-		<Target {p45} {selected} />
+		<Target />
 	{/if}
 </svg>

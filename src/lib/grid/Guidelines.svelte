@@ -1,8 +1,9 @@
 <script>
+	import { getContext } from 'svelte'
 	import PairOfGuidelines from './PairOfGuidelines.svelte'
 
-	export let p45
-	export let points
+	const p45 = getContext('p45')
+	const points = getContext('p46-points')
 </script>
 
 <rect

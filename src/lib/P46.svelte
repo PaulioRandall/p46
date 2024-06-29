@@ -3,7 +3,6 @@
 	import { writable } from 'svelte/store'
 	import { P45, Shape } from 'p45'
 
-	import Header from './header/Header.svelte'
 	import RefGrid from './grid/RefGrid.svelte'
 	import Console from './Console.svelte'
 	import generatePoints from './generate-points'
@@ -14,18 +13,22 @@
 	export let size = 24
 
 	const p45 = new P45(Number(size))
-	setContext('p45', p45)
-
 	const points = generatePoints(p45)
 
-	//@prop selected
-	// The selected node.
-	// @default Grid.centerNode
-	let selected = points.find((p) => {
-		return p.x === p45.center && p.y === p45.center
-	})
-
 	let shapes
+
+	setContext('p45', p45)
+	setContext('p46-points', points)
+
+	setContext(
+		'p46-selected-store',
+		writable(
+			points.find((p) => {
+				//
+				return p.x === p45.center && p.y === p45.center
+			})
+		)
+	)
 
 	setContext('p46-axis-enabled-store', writable(true))
 	setContext('p46-guidelines-enabled-store', writable(true))
@@ -39,8 +42,7 @@
 			<slot name="header" />
 		</div>
 	{/if}
-	<Header {selected} />
-	<RefGrid {p45} {points} bind:selected>
+	<RefGrid>
 		{#if shapes}
 			{#each Object.entries(shapes) as [id, draw] (id)}
 				<Shape {draw} fill="transparent" />

@@ -1,6 +1,10 @@
 <script>
-	export let p45
-	export let selected
+	import { getContext } from 'svelte'
+
+	const p45 = getContext('p45')
+	const selectedStore = getContext('p46-selected-store')
+
+	$: selected = $selectedStore
 </script>
 
 {#if selected}

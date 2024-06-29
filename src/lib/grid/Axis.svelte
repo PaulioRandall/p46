@@ -1,6 +1,8 @@
 <script>
-	export let p45
-	export let points
+	import { getContext } from 'svelte'
+
+	const p45 = getContext('p45')
+	const points = getContext('p46-points')
 </script>
 
 {#each points as p (p.node)}

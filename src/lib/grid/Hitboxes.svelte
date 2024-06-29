@@ -1,6 +1,8 @@
 <script>
-	export let points
-	export let selected
+	import { getContext } from 'svelte'
+
+	const points = getContext('p46-points')
+	const selectedStore = getContext('p46-selected-store')
 </script>
 
 {#each points as p (p.node)}
@@ -13,7 +15,7 @@
 		stroke="transparent"
 		stroke-width="0.1"
 		class="p46-ref-grid-hitbox"
-		on:click={() => (selected = p)} />
+		on:click={() => selectedStore.set(p)} />
 {/each}
 
 <style>
