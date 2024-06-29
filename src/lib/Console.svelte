@@ -1,6 +1,6 @@
 <script>
-	import TabLabels from './TabLabels.svelte'
-	import Textarea from './Textarea.svelte'
+	import TabLabels from './console/TabLabels.svelte'
+	import Textarea from './console/Textarea.svelte'
 
 	export let shapes = {}
 	let selectedId = ''
@@ -24,9 +24,9 @@
 	newShape(
 		[
 			'move to U2',
-			'quad curve to M22 with slope V16',
-			'quad curve to E2 with slope D16',
-			'quad curve to U2 with slope M8',
+			'quad curve to M22 control with V16',
+			'quad curve to E2 control with D16',
+			'quad curve to U2 control with M8',
 			'close',
 		].join('\n')
 	)

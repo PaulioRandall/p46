@@ -1,10 +1,11 @@
 <script>
-	import { P45 } from 'p45'
-	import P46 from '$lib/P46.svelte'
+	import { P46 } from '$lib'
 </script>
 
 <main>
-	<P46 p45={new P45(24)} />
+	<P46 size="24">
+		<svelte:fragment slot="header"></svelte:fragment>
+	</P46>
 </main>
 
 <style>

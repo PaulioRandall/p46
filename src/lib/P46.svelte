@@ -4,7 +4,7 @@
 
 	import Header from './header/Header.svelte'
 	import RefGrid from './grid/RefGrid.svelte'
-	import InputTabs from './input/InputTabs.svelte'
+	import Console from './Console.svelte'
 	import generatePoints from './generate-points'
 
 	//@prop size
@@ -12,7 +12,7 @@
 	// @default 24
 	export let size = 24
 
-	const p45 = new P45(24)
+	const p45 = new P45(Number(size))
 	setContext('p45', p45)
 
 	const points = generatePoints(p45)
@@ -33,6 +33,11 @@
 </script>
 
 <div class="p46">
+	{#if $$slots.header}
+		<div class="p46-header">
+			<slot name="header" />
+		</div>
+	{/if}
 	<Header
 		{selected}
 		bind:pointsEnabled
@@ -42,7 +47,7 @@
 	<RefGrid
 		{p45}
 		{points}
-		{selected}
+		bind:selected
 		{pointsEnabled}
 		{guidelinesEnabled}
 		{targetEnabled}
@@ -53,5 +58,15 @@
 			{/each}
 		{/if}
 	</RefGrid>
-	<InputTabs bind:shapes />
+	<Console bind:shapes />
 </div>
+
+<style>
+	.p46-header {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1rem;
+		gap: 1rem;
+		width: 100%;
+	}
+</style>
