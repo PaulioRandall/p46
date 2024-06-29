@@ -16,4 +16,19 @@
 	}
 </script>
 
-<TabLabel on:click={addNewUserShape}>+</TabLabel>
+<TabLabel>
+	<button class="p46-new-shape-button" on:click={addNewUserShape}> + </button>
+</TabLabel>
+
+<style>
+	.p46-new-shape-button {
+		background: transparent;
+		cursor: pointer;
+		padding: 0.75rem 1rem;
+		transform: scale(1.6);
+	}
+
+	.p46-new-shape-button:hover {
+		transform: scale(2.6);
+	}
+</style>

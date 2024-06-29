@@ -3,7 +3,6 @@
 	import ShapeTabLabel from './private/ShapeTabLabel.svelte'
 	import ConsoleTabPanel from './private/ConsoleTabPanel.svelte'
 	import NewShapeButton from './private/NewShapeButton.svelte'
-	import DelShapeButton from './private/DelShapeButton.svelte'
 
 	const userShapesStore = getContext('p46-user-shapes-store')
 </script>

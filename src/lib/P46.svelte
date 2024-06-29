@@ -31,7 +31,9 @@
 		)
 	)
 
-	const userShapes = [new UserShape(), new UserShape()]
+	const userShapes = [
+		new UserShape(), //
+	]
 
 	userShapes[0].draw = [
 		'move to U2',

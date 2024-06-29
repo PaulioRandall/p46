@@ -39,19 +39,29 @@
 	}
 </script>
 
-<TabLabel
-	highlight={$selectedShapeStore.id === shape.id}
-	on:click={setAsSelectedUserShape}>
-	{shape.id}
-	<button slot="after" class="p46-shape-tab-del-button" on:click={delUserShape}>
-		X
+<TabLabel highlight={$selectedShapeStore.id === shape.id}>
+	<button class="p46-select-shape-button" on:click={setAsSelectedUserShape}>
+		{shape.id}
 	</button>
+	<button class="p46-del-shape-button" on:click={delUserShape}> X </button>
 </TabLabel>
 
 <style>
-	.p46-shape-tab-del-button {
-		height: 100%;
-		padding: 0 0.75rem;
+	.p46-select-shape-button {
+		background: transparent;
 		cursor: pointer;
+		height: 100%;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+	}
+
+	.p46-del-shape-button {
+		background: transparent;
+		cursor: pointer;
+		height: 100%;
+		padding: 0.5rem 1rem 0.5rem 0.5rem;
+	}
+
+	.p46-del-shape-button:hover {
+		transform: scale(1.6);
 	}
 </style>

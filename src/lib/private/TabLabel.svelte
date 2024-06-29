@@ -3,22 +3,19 @@
 </script>
 
 <div class="p46-tab-label" class:p46-tab-label-highlight={highlight}>
-	<button class="p46-tab-button" on:click>
-		<slot />
-	</button>
-	<slot name="after" />
+	<slot />
 </div>
 
 <style>
 	.p46-tab-label {
 		display: flex;
+		background-color: #303030;
 
 		border-radius: 0.4rem 0.4rem 0 0;
 		border: 2px solid MediumSlateBlue;
 		border-bottom: 1px solid dimgrey;
 
 		overflow: hidden;
-		min-width: 2rem;
 	}
 
 	.p46-tab-label-highlight {
@@ -27,8 +24,7 @@
 		border-bottom: 1px solid dimgrey;
 	}
 
-	.p46-tab-button {
-		padding: 0.5rem 1rem;
-		cursor: pointer;
+	.p46-tab-label:hover {
+		background: #484848;
 	}
 </style>
