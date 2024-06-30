@@ -26,9 +26,19 @@
 		padding: 0.75rem 1rem;
 		margin: auto;
 		transform: scale(1.6);
+
+		background: #e8e8e8;
+		color: black;
 	}
 
 	.p46-new-shape-button:hover {
 		transform: scale(2.6);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.p46-new-shape-button {
+			background: #303030;
+			color: white;
+		}
 	}
 </style>

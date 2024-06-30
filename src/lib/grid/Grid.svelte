@@ -11,7 +11,7 @@
 	preserveAspectRatio="xMidYMid"
 	aria-hidden="true"
 	stroke="transparent"
-	fill="darkgrey"
+	fill="transparent"
 	class="p46-grid">
 	<g transform="translate(1,1)">
 		<slot />

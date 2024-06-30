@@ -62,4 +62,12 @@
 	.p46-del-shape-button:hover {
 		transform: scale(1.6);
 	}
+
+	@media (prefers-color-scheme: dark) {
+		.p46-select-shape-button,
+		.p46-del-shape-button {
+			background: #303030;
+			color: white;
+		}
+	}
 </style>

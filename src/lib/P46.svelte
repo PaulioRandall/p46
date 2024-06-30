@@ -89,7 +89,4 @@
 		gap: 1rem;
 		width: 100%;
 	}
-
-	.p46-after-grid {
-	}
 </style>

@@ -34,5 +34,20 @@
 		padding: 1rem;
 		font-size: 1rem;
 		margin: 0;
+
+		background: #e8e8e8;
+		color: black;
+
+		border: 1px solid dimgrey;
+		border-radius: 0 0.15rem 0.3rem 0.3rem;
+		outline: none;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.p46-console-tab-panel {
+			background: #303030;
+			color: white;
+			border-color: transparent;
+		}
 	}
 </style>

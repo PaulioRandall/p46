@@ -14,9 +14,6 @@
 		width={p45.size}
 		height={p45.size}
 		fill="transparent"
-		stroke="MediumSlateBlue"
-		stroke-width="0.1"
-		stroke-dasharray="0 0.25 0.25"
 		class="p46-border" />
 
 	{#if [8, 16, 24, 32, 48, 64].includes(p45.size)}
@@ -79,3 +76,11 @@
 		<Guideline y="60" />
 	{/if}
 {/if}
+
+<style>
+	.p46-border {
+		stroke: MediumSlateBlue;
+		stroke-width: 0.1;
+		stroke-dasharray: 0 0.25 0.25;
+	}
+</style>

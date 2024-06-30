@@ -15,9 +15,6 @@
 			y1={selected.y}
 			x2={selected.x - 1}
 			y2={selected.y}
-			stroke="crimson"
-			stroke-width="0.075"
-			stroke-dasharray="0 0.25 0.25"
 			class="p46-target-line" />
 	{/if}
 
@@ -27,9 +24,6 @@
 			y1={selected.y}
 			x2={p45.size}
 			y2={selected.y}
-			stroke="crimson"
-			stroke-width="0.075"
-			stroke-dasharray="0 0.25 0.25"
 			class="p46-target-line" />
 	{/if}
 
@@ -39,9 +33,6 @@
 			y1="0"
 			x2={selected.x}
 			y2={selected.y - 1}
-			stroke="crimson"
-			stroke-width="0.075"
-			stroke-dasharray="0 0.25 0.25"
 			class="p46-target-line" />
 	{/if}
 
@@ -51,9 +42,6 @@
 			y1={selected.y + 1}
 			x2={selected.x}
 			y2={p45.size}
-			stroke="crimson"
-			stroke-width="0.075"
-			stroke-dasharray="0 0.25 0.25"
 			class="p46-target-line" />
 	{/if}
 
@@ -63,10 +51,6 @@
 		width="1.25"
 		height="1.25"
 		rx="1"
-		fill="transparent"
-		stroke="crimson"
-		stroke-width="0.16"
-		stroke-dasharray="0.17 0.314"
 		class="p46-target-circle">
 		<animateTransform
 			attributeName="transform"
@@ -78,3 +62,31 @@
 			repeatCount="indefinite" />
 	</rect>
 {/if}
+
+<style>
+	.p46-target-line {
+		stroke: crimson;
+		stroke-width: 0.15;
+		stroke-dasharray: 0 0.25 0.25;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.p46-target-line {
+			stroke-width: 0.075;
+		}
+	}
+
+	.p46-target-circle {
+		fill: transparent;
+		stroke: crimson;
+		stroke-width: 0.3;
+		stroke-dasharray: 0.17 0.314;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.p46-target-circle {
+			stroke: crimson;
+			stroke-width: 0.15;
+		}
+	}
+</style>

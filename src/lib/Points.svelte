@@ -13,6 +13,7 @@
 
 <style>
 	.p46-ref-grid-point {
+		fill: grey;
 		pointer-events: none;
 	}
 </style>

@@ -34,6 +34,7 @@
 <style>
 	.p46-ref-grid-axis {
 		font-size: 0.6px;
+		fill: grey;
 
 		user-select: none;
 		pointer-events: none;
