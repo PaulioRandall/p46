@@ -10,22 +10,34 @@
 		Points,
 		TargetToggle,
 		Target,
+		RoundedToggle,
 		StrokeWidthSlider,
 		Console,
 		CopyCoordsButton,
+		DownloadSvgButton,
 	} from '$lib'
 </script>
 
 <main>
 	<P46 size="24">
-		<HeaderRow slot="before-grid">
-			<AxisToggle />
-			<GuidelinesToggle />
-			<PointsToggle />
-			<TargetToggle />
-			<StrokeWidthSlider />
-			<CopyCoordsButton />
-		</HeaderRow>
+		<svelte:fragment slot="before-grid">
+			<HeaderRow>
+				<AxisToggle />
+				<GuidelinesToggle />
+				<PointsToggle />
+				<TargetToggle />
+			</HeaderRow>
+
+			<HeaderRow>
+				<StrokeWidthSlider />
+			</HeaderRow>
+
+			<HeaderRow>
+				<CopyCoordsButton />
+				<RoundedToggle />
+				<DownloadSvgButton />
+			</HeaderRow>
+		</svelte:fragment>
 
 		<svelte:fragment slot="before-shape">
 			<Axis />

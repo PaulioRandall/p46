@@ -44,6 +44,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 <CopyCoordsButton />
 ```
 
+### `<DownloadSvgButton>`
+
+```svelte
+<DownloadSvgButton />
+```
+
 ### `<Guidelines>`
 
 ```svelte
@@ -87,6 +93,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 
 ```svelte
 <PointsToggle />
+```
+
+### `<RoundedToggle>`
+
+```svelte
+<RoundedToggle />
 ```
 
 ### `<StrokeWidthSlider>`

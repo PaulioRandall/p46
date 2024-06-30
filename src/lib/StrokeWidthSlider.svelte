@@ -24,10 +24,10 @@
 <style>
 	.p46-stroke-width-slider {
 		display: flex;
-		gap: 0.5rem;
+		gap: 1rem;
 		flex-grow: 1;
 
-		padding: 0.35rem 1rem;
+		padding: 0.5rem 1rem;
 		background: #d0d0d0;
 		border-radius: 0.4rem;
 

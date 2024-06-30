@@ -6,10 +6,10 @@
 	import Grid from './grid/Grid.svelte'
 	import HitBoxes from './grid/HitBoxes.svelte'
 	import UserShape from './grid/UserShape.js'
+	import generatePoints from './grid/generate-points'
 
 	import Console from './Console.svelte'
 	import ConsoleShapeDrawer from './console/ConsoleShapeDrawer.svelte'
-	import generatePoints from './generate-points'
 
 	//@prop size
 	// Size of the P45 grid.
@@ -48,6 +48,7 @@
 	setContext('p46-guidelines-enabled-store', writable(true))
 	setContext('p46-points-enabled-store', writable(true))
 	setContext('p46-target-enabled-store', writable(true))
+	setContext('p46-rounded-enabled-store', writable(false))
 	setContext('p46-stroke-width-slider-store', writable(1))
 
 	setContext('p46-user-shapes-store', writable(userShapes))
