@@ -48,6 +48,7 @@
 	setContext('p46-guidelines-enabled-store', writable(true))
 	setContext('p46-points-enabled-store', writable(true))
 	setContext('p46-target-enabled-store', writable(true))
+	setContext('p46-stroke-width-slider-store', writable(1))
 
 	setContext('p46-user-shapes-store', writable(userShapes))
 	setContext('p46-selected-user-shape-store', writable(userShapes[0]))

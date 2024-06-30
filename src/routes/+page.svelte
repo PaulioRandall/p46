@@ -10,6 +10,7 @@
 		Points,
 		TargetToggle,
 		Target,
+		StrokeWidthSlider,
 		Console,
 		CopyCoordsButton,
 	} from '$lib'
@@ -22,6 +23,7 @@
 			<GuidelinesToggle />
 			<PointsToggle />
 			<TargetToggle />
+			<StrokeWidthSlider />
 			<CopyCoordsButton />
 		</HeaderRow>
 

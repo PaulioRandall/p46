@@ -89,6 +89,12 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 <PointsToggle />
 ```
 
+### `<StrokeWidthSlider>`
+
+```svelte
+<StrokeWidthSlider />
+```
+
 ### `<Target>`
 
 ```svelte

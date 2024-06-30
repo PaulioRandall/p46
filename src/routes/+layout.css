@@ -3,6 +3,7 @@
 ::after {
 	box-sizing: border-box;
 	border: 0 solid transparent;
+	font-family: sans-serif, Arial, Helvetica;
 }
 
 html,

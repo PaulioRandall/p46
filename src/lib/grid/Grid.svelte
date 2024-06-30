@@ -2,6 +2,7 @@
 	import { getContext } from 'svelte'
 
 	const p45 = getContext('p45')
+	const strokeWidthStore = getContext('p46-stroke-width-slider-store')
 </script>
 
 <svg
@@ -12,6 +13,7 @@
 	aria-hidden="true"
 	stroke="transparent"
 	fill="transparent"
+	stroke-width={$strokeWidthStore}
 	class="p46-grid">
 	<g transform="translate(1,1)">
 		<slot />
