@@ -1,7 +1,7 @@
 <script>
 	import { getContext } from 'svelte'
 	import TabLabel from './TabLabel.svelte'
-	import UserShape from '../private/UserShape'
+	import UserShape from '../grid/UserShape'
 
 	const userShapesStore = getContext('p46-user-shapes-store')
 	const selectedShapeStore = getContext('p46-selected-user-shape-store')

@@ -1,6 +1,6 @@
 <script>
 	import { getContext } from 'svelte'
-	import Button from './private/Button.svelte'
+	import Button from './header/Button.svelte'
 
 	const selectedStore = getContext('p46-selected-store')
 

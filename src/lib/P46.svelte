@@ -3,9 +3,9 @@
 	import { writable } from 'svelte/store'
 	import { P45, Shape } from 'p45'
 
-	import Grid from './private/Grid.svelte'
-	import HitBoxes from './private/HitBoxes.svelte'
-	import UserShape from './private/UserShape.js'
+	import Grid from './grid/Grid.svelte'
+	import HitBoxes from './grid/HitBoxes.svelte'
+	import UserShape from './grid/UserShape.js'
 
 	import Console from './Console.svelte'
 	import ConsoleShapeDrawer from './console/ConsoleShapeDrawer.svelte'

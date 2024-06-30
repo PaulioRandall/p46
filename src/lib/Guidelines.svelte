@@ -1,6 +1,6 @@
 <script>
 	import { getContext } from 'svelte'
-	import Guideline from './private/Guideline.svelte'
+	import Guideline from './grid/Guideline.svelte'
 
 	const p45 = getContext('p45')
 	const points = getContext('p46-points')
