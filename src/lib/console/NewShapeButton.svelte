@@ -22,7 +22,6 @@
 
 <style>
 	.p46-new-shape-button {
-		background: transparent;
 		cursor: pointer;
 		padding: 0.75rem 1rem;
 		margin: auto;
