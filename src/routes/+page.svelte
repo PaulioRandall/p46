@@ -11,14 +11,13 @@
 		TargetToggle,
 		Target,
 		Console,
-		ConsoleShapeDrawer,
 		CopyCoordsButton,
 	} from '$lib'
 </script>
 
 <main>
 	<P46 size="24">
-		<HeaderRow slot="header">
+		<HeaderRow slot="before-grid">
 			<AxisToggle />
 			<GuidelinesToggle />
 			<PointsToggle />
@@ -26,13 +25,17 @@
 			<CopyCoordsButton />
 		</HeaderRow>
 
-		<Axis />
-		<Guidelines />
-		<Points />
-		<ConsoleShapeDrawer />
-		<Target />
+		<svelte:fragment slot="before-shape">
+			<Axis />
+			<Guidelines />
+			<Points />
+		</svelte:fragment>
 
-		<Console slot="footer" />
+		<svelte:fragment slot="after-shape">
+			<Target />
+		</svelte:fragment>
+
+		<Console slot="after-grid" />
 	</P46>
 </main>
 

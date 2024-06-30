@@ -49,9 +49,9 @@
 <style>
 	.p46-select-shape-button {
 		background: transparent;
-		cursor: pointer;
 		height: 100%;
 		padding: 0.5rem 0.5rem 0.5rem 1rem;
+		margin-right: auto;
 	}
 
 	.p46-del-shape-button {

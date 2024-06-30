@@ -1,8 +1,8 @@
 <script>
 	import { getContext } from 'svelte'
-	import ShapeTabLabel from './private/ShapeTabLabel.svelte'
-	import ConsoleTabPanel from './private/ConsoleTabPanel.svelte'
-	import NewShapeButton from './private/NewShapeButton.svelte'
+	import ShapeTabLabel from './console/ShapeTabLabel.svelte'
+	import ConsoleTabPanel from './console/ConsoleTabPanel.svelte'
+	import NewShapeButton from './console/NewShapeButton.svelte'
 
 	const userShapesStore = getContext('p46-user-shapes-store')
 </script>
@@ -28,7 +28,8 @@
 
 	.p46-console-tab-labels {
 		display: flex;
-		gap: 0.2rem;
+		column-gap: 0.2rem;
+		flex-wrap: wrap;
 		z-index: 1;
 	}
 

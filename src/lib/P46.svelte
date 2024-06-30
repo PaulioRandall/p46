@@ -8,6 +8,7 @@
 	import UserShape from './private/UserShape.js'
 
 	import Console from './Console.svelte'
+	import ConsoleShapeDrawer from './console/ConsoleShapeDrawer.svelte'
 	import generatePoints from './generate-points'
 
 	//@prop size
@@ -53,20 +54,23 @@
 </script>
 
 <div class="p46">
-	{#if $$slots.header}
-		<div class="p46-header">
-			<slot name="header" />
+	{#if $$slots['before-grid']}
+		<div class="p46-before-grid">
+			<slot name="before-grid" />
 		</div>
 	{/if}
 
 	<Grid>
-		<slot />
+		<slot name="before-shape" />
+		<ConsoleShapeDrawer />
+		<slot name="after-shape" />
 		<HitBoxes />
+		<slot name="after-hitbox" />
 	</Grid>
 
-	{#if $$slots.footer}
-		<div class="p46-footer">
-			<slot name="footer" />
+	{#if $$slots['after-grid']}
+		<div class="p46-after-grid">
+			<slot name="after-grid" />
 		</div>
 	{/if}
 </div>
@@ -75,10 +79,10 @@
 	.p46 {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
 	}
 
-	.p46-header {
+	.p46-before-grid {
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 1rem;
@@ -86,6 +90,6 @@
 		width: 100%;
 	}
 
-	.p46-footer {
+	.p46-after-grid {
 	}
 </style>

@@ -1,8 +1,12 @@
 <script>
 	export let highlight = false
+	export let width = '9.5rem'
 </script>
 
-<div class="p46-tab-label" class:p46-tab-label-highlight={highlight}>
+<div
+	class="p46-tab-label"
+	class:p46-tab-label-highlight={highlight}
+	style="width: {width};">
 	<slot />
 </div>
 

@@ -17,4 +17,3 @@ export { default as Target } from './Target.svelte'
 export { default as CopyCoordsButton } from './CopyCoordsButton.svelte'
 
 export { default as Console } from './Console.svelte'
-export { default as ConsoleShapeDrawer } from './ConsoleShapeDrawer.svelte'

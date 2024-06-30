@@ -1,7 +1,7 @@
 <script>
 	import { getContext } from 'svelte'
 	import TabLabel from './TabLabel.svelte'
-	import UserShape from './UserShape'
+	import UserShape from '../private/UserShape'
 
 	const userShapesStore = getContext('p46-user-shapes-store')
 	const selectedShapeStore = getContext('p46-selected-user-shape-store')
@@ -16,7 +16,7 @@
 	}
 </script>
 
-<TabLabel>
+<TabLabel width="3rem">
 	<button class="p46-new-shape-button" on:click={addNewUserShape}> + </button>
 </TabLabel>
 
@@ -25,6 +25,7 @@
 		background: transparent;
 		cursor: pointer;
 		padding: 0.75rem 1rem;
+		margin: auto;
 		transform: scale(1.6);
 	}
 
