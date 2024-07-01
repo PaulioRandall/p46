@@ -4,7 +4,7 @@
 
 # P46
 
-A GUI tool for composing P45 icons.
+A modular GUI tool for composing P45 icons.
 
 The core component is `<P46>`. Every other component is slotted within it somewhere.
 
