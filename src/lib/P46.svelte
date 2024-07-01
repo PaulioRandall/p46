@@ -47,6 +47,7 @@
 
 	const userShapes = [
 		new UserShape(), //
+		new UserShape(), //
 	]
 
 	userShapes[0].draw = [
@@ -55,6 +56,15 @@
 		'quad curve to E2 control with D16',
 		'quad curve to U2 control with M8',
 		'close',
+	].join('\n')
+
+	userShapes[1].draw = [
+		'move to R8',
+		'curve to O10 control with R10',
+		'move to H8',
+		'curve to K10 control with H10',
+		'move to I14',
+		'curve to Q14 control with M20',
 	].join('\n')
 
 	//@ctx p46-axis-enabled-store
