@@ -1,6 +1,13 @@
 <script>
 	import { getContext } from 'svelte'
 
+	/*@component
+		Slotted into a `<P46>` component to add a target over
+		the currently selected point to the grid.
+		Slot the `<TargetToggle>` component into a `<P46>` _before-grid_
+		slot to allow feature toggling.
+	*/
+
 	const p45 = getContext('p45')
 	const selectedStore = getContext('p46-selected-store')
 	const targetEnabledStore = getContext('p46-target-enabled-store')

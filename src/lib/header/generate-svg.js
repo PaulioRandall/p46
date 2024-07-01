@@ -1,5 +1,10 @@
 export default (p45, shapes, svgAttrs, shapeAttrs) => {
-	const svgShapes = compileShapes(p45, shapes, shapeAttrs)
+	let svgShapes = ''
+
+	try {
+		svgShapes = compileShapes(p45, shapes, shapeAttrs)
+	} catch (err) {}
+
 	svgAttrs = compileAttrs({
 		'xmlns': 'http://www.w3.org/2000/svg',
 		'xmlns:xlink': 'http://www.w3.org/1999/xlink',

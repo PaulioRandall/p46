@@ -2,21 +2,17 @@
 [![Latest version](https://img.shields.io/github/v/release/PaulioRandall/p46)](https://github.com/PaulioRandall/p46/releases)
 [![Release date](https://img.shields.io/github/release-date/PaulioRandall/p46)](https://github.com/PaulioRandall/p46/releases)
 
-> 1: Find and replace content in the project using patterns `___TODO_[A-Z]+___` & `\*\*_TODO_[A-Z]+_\*\*` using your project's specific details.
-> 2: `npx npm-check-updates -u`
-> 3: `npm i`
-> 4: `npm run commit`
-> 5: Delete this quote from `README.template.md`
-
 # P46
 
 A GUI tool for composing P45 icons.
+
+The core component is `<P46>`. Every other component is slotted within it somewhere.
 
 **Requires Svelte version 4.**
 
 ## Made to be Plundered
 
-Do whatever as long as you adhere to the permissive MIT license found within.
+Fork, pillage, and plunder! Do whatever as long as you adhere to the project's permissive MIT license.
 
 ## Components
 

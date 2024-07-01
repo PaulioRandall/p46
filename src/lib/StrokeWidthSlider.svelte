@@ -1,4 +1,9 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component _before-grid_ slot to allow
+		adjusting of line widths. This is applied to all shapes.
+	*/
+
 	import { getContext } from 'svelte'
 
 	const strokeWidthStore = getContext('p46-stroke-width-slider-store')
@@ -35,6 +40,7 @@
 		font-size: 1.2rem;
 		align-items: center;
 
+		user-select: none;
 		white-space: nowrap;
 	}
 

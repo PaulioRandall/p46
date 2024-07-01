@@ -1,4 +1,10 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component to add reference points to the grid.
+		Slot the `<PointsToggle>` component into a `<P46>` _before-grid_
+		slot to allow feature toggling.
+	*/
+
 	import { getContext } from 'svelte'
 
 	const points = getContext('p46-points')

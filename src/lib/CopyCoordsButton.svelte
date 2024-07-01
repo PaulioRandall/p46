@@ -1,4 +1,10 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component _before-grid_ slot
+		so users view the currently selected node and,
+		upon click, copy the node to clipboard.
+	*/
+
 	import { getContext } from 'svelte'
 	import Button from './header/Button.svelte'
 

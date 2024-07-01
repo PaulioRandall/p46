@@ -1,4 +1,10 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component _after-grid_ slot
+		so users can add, remove, and modify shapes
+		within the grid.
+	*/
+
 	import { getContext } from 'svelte'
 	import ShapeTabLabel from './console/ShapeTabLabel.svelte'
 	import ConsoleTabPanel from './console/ConsoleTabPanel.svelte'

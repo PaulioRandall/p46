@@ -1,4 +1,10 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component to add axis to the grid.
+		Slot the `<AxisToggle>` component into a `<P46>` _before-grid_
+		slot to allow feature toggling.
+	*/
+
 	import { getContext } from 'svelte'
 
 	const p45 = getContext('p45')

@@ -17,6 +17,7 @@
 		border-radius: 0.4rem 0.4rem 0 0;
 		border: 2px solid MediumSlateBlue;
 		border-bottom: none;
+		user-select: none;
 
 		overflow: hidden;
 	}

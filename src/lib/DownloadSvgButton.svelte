@@ -1,4 +1,9 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component _before-grid_ slot
+		so users can download the SVG.
+	*/
+
 	import { getContext } from 'svelte'
 	import generateSvg from './header/generate-svg'
 
@@ -59,6 +64,7 @@
 		padding: 0.5rem 1rem;
 		border-radius: 0.4rem;
 
+		user-select: none;
 		font-size: 1.2rem;
 		cursor: pointer;
 	}

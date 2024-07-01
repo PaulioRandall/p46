@@ -1,4 +1,10 @@
 <script>
+	/*@component
+		Slotted into a `<P46>` component to add guidelines to the grid.
+		Slot the `<GuidelinesToggle>` component into a `<P46>` _before-grid_
+		slot to allow feature toggling.
+	*/
+
 	import { getContext } from 'svelte'
 	import Guideline from './grid/Guideline.svelte'
 
