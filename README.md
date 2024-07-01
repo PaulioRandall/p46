@@ -72,14 +72,14 @@ Do whatever as long as you adhere to the permissive MIT license found within.
 
 ```svelte
 <script>
-	// Size of the P45 grid.
-	export let size = 24
+  // Size of the P45 grid.
+  export let size = 24
 </script>
 ```
 
 ```svelte
 <P46
-	size={24}
+  size={24}
 />
 ```
 
