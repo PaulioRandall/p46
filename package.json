@@ -1,7 +1,7 @@
 {
 	"author": "Paul Williams",
 	"name": "p46",
-	"description": "A GUI tool for composing P45 icons.",
+	"description": "A modular GUI tool for composing P45 icons.",
 	"type": "module",
 	"license": "MIT",
 	"version": "0.1.0",
@@ -31,9 +31,9 @@
 		"fmt": "prettier --plugin prettier-plugin-svelte --log-level warn --write .",
 		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests --testPathPattern ./src/",
 		"build": "vite build",
-		"pkg": "svelte-package -t false",
+		"package": "svelte-package -t false",
 		"docs": "p24 -g \"dist/*.svelte\"",
-		"commit": "npm run fmt && npm run test && npm run build && npm run pkg && npm run docs && cat ./ready-to-ship.txt",
+		"commit": "npm run fmt && npm run test && npm run build && npm run package && npm run docs && cat ./ready-to-ship.txt",
 		"dev": "npm run fmt && vite dev --port 3000"
 	},
 	"devDependencies": {
