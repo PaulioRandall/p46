@@ -4,7 +4,7 @@
 	"description": "A modular GUI tool for composing P45 icons.",
 	"type": "module",
 	"license": "MIT",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"engines": {
 		"node": ">=18"
 	},
@@ -44,10 +44,10 @@
 		"p24": "1.1.0",
 		"prettier": "3.3.2",
 		"prettier-plugin-svelte": "3.2.5",
-		"vite": "5.3.2"
+		"vite": "5.3.3"
 	},
 	"dependencies": {
-		"p45": "1.0.1"
+		"p45": "^1.1.0"
 	},
 	"peerDependencies": {
 		"svelte": "4.x"
